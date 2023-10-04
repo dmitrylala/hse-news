@@ -24,6 +24,7 @@ update-dev: ## Update development dependencies
 
 build: ## Build docker image from dockerfile
 	DOCKER_BUILDKIT=1 docker build \
+		--no-cache \
 		-f Dockerfile \
 		--network=host \
 		-t hse_news_image .
