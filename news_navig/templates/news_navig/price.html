@@ -1,0 +1,61 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}Dayana{% endblock %}</title>
+{% load static %}
+
+<main>
+    {% block content %}
+    <article class="func">
+
+        <div class="container">
+
+            <h2 class="func-header">PRICE</h2>
+            <div class="funcard-row">
+                <div class="funcard">
+                    <h2>Categories</h2>
+                    <ul class="price">
+                        <li>BLACK AND WHITE
+                            <ul>
+                                <li>Small - 50$</li>
+                                <li>Medium - 100$
+                                </li>
+                                <li>Big - 200$</li>
+                            </ul>
+                        </li>
+                        <li>COLOR
+                            <ul>
+                                <li>Small - 35$</li>
+                                <li>Medium - 70$
+                                </li>
+                                <li>Big - 140$</li>
+                            </ul>
+
+                </div>
+                <div class="funcard">
+                    <h2>Types</h2>
+                    <ol>
+                        <li>Ordinary</li>
+                        <li>Fashion</li>
+                        <li>Art</li>
+                        <li>Yours</li>
+                    </ol>
+                </div>
+
+                <div class="funcard">
+                    <h2>Objects</h2>
+                    <ul>
+                        <li>People</li>
+                        <li>Animals</li>
+                        <li>Food</li>
+                        <li>Architecture</li>
+                        <li>Yours</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </article>
+    {% endblock %}
+</main>

@@ -1,0 +1,65 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}Dayana{% endblock %}</title>
+{% load static %}
+
+
+<main>
+    {% block content %}
+
+    <header class="header">
+        <h1 class="header-title">DAYANA</h1>
+        <p class="header-subtitle">Photographer</p>
+        <div class="header-arrow">
+            <a href="#WORKS"> <img src="{% static 'news_navig/images/header/chevron-down.svg' %}" alt=home></a>
+        </div>
+    </header>
+
+    <div class="action">
+    </div>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="portfolio-header" id="WORKS">WORKS</h2>
+
+            <!-- portfolio-cards-wrapper -->
+            <section class="portfolio-cards-wrapper">
+                <!-- // portfolio-cards-wrapper -->
+
+                <!--Card -->
+                <div class="card">
+                    <a href="{% url 'news_navig:tarkovsky' %}" class="card-link">
+                        <img class="card-img" src="{% static 'news_navig/images/pictures/derevo.jpg' %}" width="48px"
+                            alt="tarkovsky">
+                        <h3 class="card-title">TARKOVSKY</h3>
+                        <p>1</p>
+                    </a>
+                </div>
+                <!--// Card -->
+
+                <!--Card -->
+                <div class="card">
+                    <a href="{% url 'news_navig:moscow' %}" class="card-link">
+                        <img class="card-img" src="{% static 'news_navig/images/pictures/moscow.jpg' %}" width="48px"
+                            alt="moscow">
+                        <h3 class="card-title">MOSCOW</h3>
+                        <p>2</p>
+                    </a>
+                </div>
+                <!--// Card -->
+
+                <!--Card -->
+                <div class="card">
+                    <a href="{% url 'news_navig:sasha' %}" class="card-link">
+                        <img class="card-img" src="{% static 'news_navig/images/pictures/sasha3.jpg' %}" width="48px"
+                            alt="sasha">
+                        <h3 class="card-title">SASHA</h3>
+                        <p>3</p>
+                    </a>
+                </div>
+                <!--// Card -->
+            </section>
+        </div>
+    </section>
+    {% endblock %}
+</main>

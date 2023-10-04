@@ -1,0 +1,10 @@
+{% extends "news_navig/layout.html" %}
+{% load static %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+{{ content | safe }}
+{% endblock %}

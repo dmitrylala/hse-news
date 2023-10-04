@@ -1,0 +1,28 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}News{% endblock %}</title>
+{% load static %}
+
+<main>
+    {% block content %}
+
+    <section class="portfolio">
+        <div class="container">
+            <h1 class="portfolio-header" id="WORKS">CREATE NEW ARTICLE</h1>
+
+            <div class="features">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.title}}<br>
+                    {{ form.anons}}<br>
+                    {{ form.full_text}}<br>
+                    {{ form.date}}<br>
+                    <span> {{ error }}</span>
+                    <button class="btn btn-success" type="submit">ADD</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    {% endblock %}
+</main>

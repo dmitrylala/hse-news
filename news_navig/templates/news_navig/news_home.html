@@ -1,0 +1,31 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}News{% endblock %}</title>
+{% load static %}
+
+
+{% block content %}
+
+<section class="portfolio">
+    <div class="container">
+        <h2 class="portfolio-header" id="WORKS">NEWS</h2>
+
+        <div class="features">
+            {% if news %}
+            {% for el in news %}
+            <div class="alert alert-warning">
+                <h2>{{ el.title }}</h2>
+                <p> {{ el.anons }}</p>
+                <a href="{% url 'news_navig:news' pk=el.id %}" class="btn btn-warning">READ</a>
+            </div>
+
+            {% endfor %}
+            {% else %}
+            <h1>Новостей на ближайшее время нет( </h1>
+            {% endif %}
+
+            {# Комментарий #}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}{{article.title }}{% endblock %}</title>
+{% load static %}
+
+<main>
+    {% block content %}
+
+    <section class="portfolio">
+        <div class="container">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.full_text }}</p>
+            <p> {{ article.date }}</p>
+            <a href="{% url 'news_navig:page' pk=1 %}" class="btn btn-warning">GO BACK</a>
+            <div class="features">
+
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+</main>

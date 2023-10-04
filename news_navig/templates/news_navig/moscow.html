@@ -1,0 +1,36 @@
+{% extends 'news_navig/layout.html' %}
+
+<title>{% block title %}Dayana{% endblock %}</title>
+{% load static %}
+
+
+
+<main>
+    {% block content %}
+    <article class="page">
+        <div class="container">
+
+
+            <h2 class="page-header">MOSCOW</h2>
+            <div class="card_image">
+
+                <!--img -->
+                <div class="page-img">
+                    <img src="{% static 'news_navig/images/pictures/moscow1.jpg' %}" width="80%" alt="photo1">
+
+                </div>
+                <!--// img -->
+
+                <!--img -->
+                <div class="page-img">
+                    <img src="{% static 'news_navig/images/pictures/moscow2.jpg' %}" width="80%" alt="photo2">
+
+                </div>
+                <!--//img -->
+
+            </div>
+
+        </div>
+    </article>
+    {% endblock %}
+</main>
