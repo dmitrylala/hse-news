@@ -58,7 +58,7 @@ img {
     float: right;
     height: 100vh;
     background-size: cover;
-    background: rgba(210, 210, 210, 0.82);
+    background: rgba(210, 210, 210, 0.82) url("./../images/header/header-bg.JPG");
     background-blend-mode: multiply;
 }
 
