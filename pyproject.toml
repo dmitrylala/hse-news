@@ -2,7 +2,7 @@
 name = "hse-news"
 version = "0.1.0"
 description = ""
-authors = ["dayana <example@example.com"]
+authors = ["dayana <dayana@example.com>"]
 readme = "README.md"
 packages = [{include = "hse_news"}]
 
