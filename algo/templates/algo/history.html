@@ -1,0 +1,85 @@
+{% extends "algo/layout.html" %} {% load static %} {% block content %}
+
+<style>
+    ul {
+        margin-left: 20px;
+    }
+
+    li.pressable {
+        margin-top: 10px;
+    }
+</style>
+
+<section class="func">
+    <div class="container">
+        <h2 class="portfolio-header">История решений</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Число</th>
+                    <th scope="col">Ответ</th>
+                    <th scope="col">Дата</th>
+                </tr>
+            </thead>
+            <tbody style="border-top: 0px;">
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.task.num }}</td>
+                    <td>{% if result.answer == 1 %}
+                        Число положительное!
+                        {% elif result.answer == -1 %}
+                        Число отрицательное!
+                        {% else %}
+                        Это ноль!
+                        {% endif %}</td>
+                    <td>{{ result.task.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p>
+            Статистики
+        </p>
+        <ul>
+            {% for stat in stats %}
+            <li>{{ stat.description }}: {{ stat.value }}</li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Сортировка
+        </p>
+        <ul>
+            {% for sort_option in sort_options %}
+            <li class="pressable">
+                <a href="{{ history }}?order_by={{ sort_option.field }}">
+                    <input class="button" value="{{ sort_option.description }}" />
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            Фильтрация
+        </p>
+        <ul>
+            {% for filter_option in filter_options %}
+            <li class="pressable">
+                <a href="{{ history }}?filter_by={{ filter_option.field }}&value={{ filter_option.value }}">
+                    <input class="button" value="{{ filter_option.description }}" />
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <p>
+            <a href="{{ history }}">
+                <input class="button" value="Сброс" />
+            </a>
+        </p>
+    </div>
+</section>
+
+
+{% endblock content %}
