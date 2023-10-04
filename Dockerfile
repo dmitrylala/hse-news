@@ -5,14 +5,11 @@ FROM python:${PYTHON_VERSION} as python_stage
 RUN apt-get update && \
 	apt-get install -y git
 
+RUN git clone https://github.com/dmitrylala/hse-news
+WORKDIR /hse-news
+
 # Install poetry
 RUN python -m pip install --upgrade pip && pip install poetry -U
-
-WORKDIR /venv
-
-# Copy from local
-COPY pyproject.toml ruff.toml README.md ./
-COPY hse_news ./hse_news
 
 # Installing dependencies
 RUN poetry config virtualenvs.create false \

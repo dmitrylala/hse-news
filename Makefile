@@ -33,7 +33,7 @@ run: ## Create docker container from image and run
 		--name hse_news_container \
 		-p 127.0.0.1:8000:8080 \
 		--network host \
-		hse_news_image /bin/bash
+		hse_news_image python manage.py runserver 8000
 
 start: ## Start created container
 	docker start hse_news_container
