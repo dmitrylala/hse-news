@@ -1,0 +1,64 @@
+{% extends 'news/layout.html' %}
+
+<title>{% block title %}Dayana{% endblock %}</title>
+{% load static %}
+
+
+<main>
+    {% block content %}
+
+    <section class="func">
+
+        <div class="container">
+
+            <h2 class="func-header">SEND A REQUEST </h2>
+
+            <div class="funcard">
+                <form class="form" name="contacts" method="post" action="mailto:dayana.boyarkina@gmail.com">
+                    <p>1. WORK: <br>
+                        <select class="knopka" name="Work">
+                            <option class="knopka" name="BLACK&WHITE">BLACK&WHITE</option>
+                            <option class="knopka" name="COLOR">COLOR</option>
+                        </select>
+
+                        <select class="knopka" name="Size">
+                            <option class="knopka" name="Medium">Medium</option>
+                            <option class="knopka" name="Big">Big</option>
+                            <option class="knopka" name="Small">Small</option>
+
+                        </select>
+                    </p>
+
+                    <p> 2. CLIENT:
+                        Surname: <input class="knopka" type="Text" name="last_name" value="" size="10">
+                        Name: <input class="knopka" type="Text" name="first_name" value="" size="10">
+                    </p>
+
+                    <p> 3. CONTACT INFORMATION:
+                        Email: <input class="knopka" type="Text" name="email" value="" size="26">
+                        Phone number: <input class="knopka" type="Text" name="phone" value="" size="26">
+                    </p>
+                    <p> 4. DATE:<input class="knopka" type="date" id="start" name="Date"></p>
+
+
+                    <p> 5. ADDITIONAL INFORMATION:<br>
+
+                        <TEXTAREA class="knopka" name="textarea" rows=3 cols=15>Additional information</TEXTAREA>
+                    </p>
+
+
+
+                    <input type="hidden" name="function" value="page">
+                    <input type="hidden" name="page_id" value="3"></p>
+                    <p> <input class="button" type="Reset" name="Reset" value="RESET">
+                        <input class="button" type="Submit" name="submit" value="SEND A REQUEST">
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    {% endblock %}
+</main>

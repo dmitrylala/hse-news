@@ -1,0 +1,31 @@
+{% extends 'news/layout.html' %}
+
+<title>{% block title %}Dayana{% endblock %}</title>
+{% load static %}
+
+<main>
+    {% block content %}
+    <article class="page">
+
+        <section class="container">
+            <h2 class="page-header">TARKOVSKY</h2>
+            <div class="card_image">
+
+                <!--img -->
+                <div class="page-img">
+                    <img src="{% static 'news/images/pictures/tarkovsky1.jpg' %}" width="80%" alt="photo1">
+
+                </div>
+                <!--// img -->
+
+                <!--img -->
+                <div class="page-img">
+                    <img src="{% static 'news/images/pictures/derevo.jpg' %}" width="80%" alt="photo2">
+
+                </div>
+                <!--//img -->
+            </div>
+        </section>
+
+        {% endblock %}
+</main>
