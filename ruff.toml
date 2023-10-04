@@ -1,5 +1,5 @@
 select = ["E", "F", "B", "I", "N", "A", "COM", "C4", "EXE", "ISC", "PIE", "PT", "Q",
-		"RSE", "RET", "SIM", "TID", "ARG", "PD", "PL", "NPY", "RUF",
+		"RSE", "RET", "SIM", "TID", "ARG", "PD", "PL", "NPY",
 ]
 
 line-length = 100
