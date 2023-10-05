@@ -82,7 +82,14 @@ class ResultListView(generic.ListView):
 
         filter_by = url_params.get("filter_by")
         value = url_params.get("value")
-        if filter_by and value:
-            return queryset.filter(**{f"{filter_by}__exact": value})
+        if filter_by:
+            if filter_by == "special":
+                return (
+                    queryset.filter(task__num__gte=1)
+                    .filter(task__num__lte=10)
+                    .order_by("task__num")
+                )
+            if value:
+                return queryset.filter(**{f"{filter_by}__exact": value})
 
         return queryset
